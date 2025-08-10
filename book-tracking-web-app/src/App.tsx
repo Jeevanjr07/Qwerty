@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './App.css';
+import SearchScreen from './components/SearchScreen';
 
 // Color scheme from iOS design
 const colors = {
@@ -11,6 +12,8 @@ const colors = {
   bookDarkBrown: '#664229',
   gray: '#666666',
   lightGray: '#999999',
+  lightGrayBackground: '#F0F0F0',
+  shadowColor: 'rgba(0, 0, 0, 0.1)',
   success: '#44AA44',
   error: '#FF4444',
   warning: '#FF9500',
@@ -238,12 +241,7 @@ const App = () => {
           </div>
         );
       case 'search':
-        return (
-          <div className="screen-content">
-            <h1>Search Books</h1>
-            <p>Find your next great read</p>
-          </div>
-        );
+        return <SearchScreen />;
       case 'library':
         return (
           <div className="screen-content">
